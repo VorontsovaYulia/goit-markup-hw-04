@@ -14,6 +14,8 @@
   --white-color: #ffffff;
   --color-cloud: #f4f4fd;
   --color-cornflower: #e7e9fc;
+  --color-light-slate: #8E8F99;
+  --color-green: #31D0AA;
 }
 
 h1,
@@ -158,7 +160,10 @@ body {
   padding-top: 188px;
   padding-bottom: 188px;
 
-  background: var(--title-text-color-and-background);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people_office.jpeg);
+  background-size: cover;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .hero-title {
@@ -236,6 +241,18 @@ body {
   flex-basis: calc((100% - 72px) / 4);
 }
 
+.advantages-icon-box {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+
+  background-color: var(--color-cloud);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px; 
+}
 /* ----------Section Actions---------- */
 
 .actions {
@@ -256,6 +273,9 @@ body {
 /* ----------Section Team---------- */
 
 .team {
+  padding-top: 120px;
+  padding-bottom: 110px;
+
   text-align: center;
   background-color: var(--color-cloud);
 }
@@ -271,7 +291,8 @@ body {
 }
 
 .employees-cards-box {
-  padding: 32px;
+  max-width: 264px;
+  padding: 16px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -288,10 +309,84 @@ body {
   font-size: 36px;
   line-height: 1.11;
   text-transform: capitalize;
-
   margin-bottom: 72px;
 
   color: var(--title-text-color-and-background);
+}
+
+.speciality {
+  margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-item {
+width: 40px;
+height: 40px;
+}
+
+.social-list-link {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+
+background-color: var(--secondary-text-color);
+color: var(--color-cloud)
+}
+
+.social-list-link:is(:hover, :focus) {
+background-color: var(--accent-color);
+}
+
+.social-list-icon {
+  fill: currentColor;
+}
+
+/* ----------Section Customers---------- */
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-list-item {
+  width: 168px;
+  height: 88px;
+}
+
+.customers-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+  color: var(--color-light-slate);
+}
+
+.customers-list-link:is(:hover, :focus) {
+  border-color: var(--accent-color);
+  color: var(--accent-color)
+}
+
+.customers-list-icon {
+  fill: currentColor;
 }
 
 /* ----------Section Footer---------- */
@@ -310,10 +405,59 @@ body {
 .footer-text {
   width: 264px;
   margin-top: 16px;
+  margin-right: 120px;
 
   color: var(--color-cornflower);
 }
 
+.footer-box {
+  display: flex;
+  justify-content: left;
+}
+
+.title-right {
+  font-weight: 500;
+  font-size: 16px;
+color: var(--white-color);
+}
+
+.footer-right {
+  width: 208px;
+  height: 80px;
+}
+.title-right {
+  margin-bottom: 16px;
+}
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-list-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-list-link {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.1);
+color: var(--color-cloud)
+}
+
+.footer-list-link:is(:hover, :focus) {
+  background-color: var(--color-green);
+  }
+  
+  .footer-list-icon {
+    fill: currentColor;
+  }
+  
 /* ----------Section Portfolio---------- */
 
 .portfolio {
@@ -358,7 +502,7 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
 
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--color-cornflower);
   border-radius: 4px;
   padding: 12px 24px;
 
@@ -370,4 +514,14 @@ body {
 .portfolio-btn:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-color);
+}
+
+.portfolio-link {
+  display: block;
+}
+
+.portfolio-link:is(:hover, :focus) {
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
