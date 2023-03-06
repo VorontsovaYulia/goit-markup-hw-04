@@ -405,13 +405,17 @@ background-color: var(--accent-color);
 .footer-text {
   width: 264px;
   margin-top: 16px;
-  margin-right: 120px;
 
   color: var(--color-cornflower);
 }
 
 .footer-box {
   display: flex;
+  align-items: baseline;
+}
+
+.footer-left {
+margin-right: 120px;
 }
 
 .title-right {
@@ -420,18 +424,12 @@ background-color: var(--accent-color);
 color: var(--white-color);
 }
 
-.footer-right {
-  width: 208px;
-  height: 80px;
-}
 .title-right {
-  margin-bottom: 16px;
-  
+  margin-bottom: 16px; 
 }
 
 .footer-list {
   display: flex;
-  justify-content: left;
   gap: 16px;
 }
 
